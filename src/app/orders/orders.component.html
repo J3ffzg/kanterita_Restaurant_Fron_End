@@ -1,0 +1,18 @@
+<h3>Orders</h3>
+<ng-container *ngIf="orders">
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>OrderId</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+    </table>
+    <tbody>
+        <tr *ngFor="let order of orders">
+            <td><button class="btn btn-primary" (click)="showDetails(order.id)">Show Details</button></td>
+            <td>{{order.id}}</td>
+            <td>{{order.client}}</td>
+        </tr>
+    </tbody>

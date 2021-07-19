@@ -1,0 +1,21 @@
+<h3>Details</h3>
+<button class="btn btn-primary" (click)="goToOrders()">Return To Orders</button>
+<ng-container *ngIf="details">
+    <table>
+        <thead>
+            <tr>
+                <th>Details</th>
+                <th>Amount</th>
+                <th>UnitPrice</th>
+            </tr>
+        </thead>
+    </table>
+    <tbody>
+        <tr *ngFor="let detail of details">
+            <td>{{detail.detail}}</td>
+            <td>{{detail.amount}}</td>
+            <td>{{detail.unitPrice}}</td>
+        </tr>
+    </tbody>
+
+</ng-container>
